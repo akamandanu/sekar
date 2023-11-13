@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rinonce Sekar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer ></script>
+    <script>
+        function toggleAudio() {
+            var audio = document.getElementById("audio");
+            var btn_music = document.getElementById("btn-music");
+            if (audio.paused) {
+            audio.play();
+                btn_music.innerText = "Music On";
+            } else {
+            audio.pause();
+            btn_music.innerText = "Music Off";
+            }
+        }
+    </script>
+</head>
+<body>
+    <audio id="audio" autoplay loop>
+        <source src="backgroundSong.mp3" type="audio/ogg">
+        <source src="backgroundSong.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="container" id="container">
+        <div class="card">
+            <h2>Dear Renonce Sekar</h2>
+            <div class="letter">
+                <p class=>aku baru memang mengenal mu, meskipun terlihat singkat tapi menurutku itu bermakna, aku merasakan keajaiban dalam setiap momen kita meskipun hanya melalui chat karena kita belum pernah bertemu di karenakan ada alasan terntentu yang tidak bisa di sampaikan, aku merasa dekat denganmu mesikpun hanya aku yang merasakannya. Perasaan ini tumbuh dengan sendirinya, dan aku suka padamu. Aku paham bahwa mungkin bukan hanya aku yang merasakannya, dan aku tidak ingin memaksa atau membuatmu terbebani. Biarkan waktu yang menjawab pertanyaan kita. aku hanya ingin kamu tahu, setiap kata dan tawa yang kita bagi melalui chat memiliki arti besar bagiku, dan aku senang memiliki kesempatan ini, meskipun hanya dalam dunia maya.</p>
+            </div>
+            <h2>From Aji</h2>
+            <div class="player">
+                <p>Music : Better Together (jackjohnsonmusic)</p>
+                
+            </div>
+            <button onclick="toggleAudio()" id="btn-music">Music On</button>
+
+        </div>
+
+    </div>
+</body>
+</html>

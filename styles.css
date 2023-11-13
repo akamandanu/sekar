@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 5s ease;
+    background-color: #83A2FF;
+}
+
+.card{
+    /* From https://css.glass */
+    background: rgba(255, 238, 217, 0.39);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 2px solid rgba(255, 238, 217, 1);
+    height: 30rem;
+    width: 20rem;
+    display: flex;
+    justify-content: space-evenly;
+    color: #f7f7f7;
+    flex-direction: column;
+    padding: 0 2rem;
+    position: relative;
+    margin: 0 1rem;
+}
+
+.card h2{
+    font-size: 1.2em;
+}
+
+.letter{
+    padding: 1rem;
+    border: 1px solid rgba(255, 238, 217, 1);
+    border-radius: 10px;
+}
+
+
+.letter > p{
+    overflow-y: scroll;
+    max-height: 15rem;
+    border-radius: 10px;
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+    word-spacing: 1px;
+    font-size: 0.8em;
+}
+
+.card h2:last-of-type{
+    text-align: right;
+}
+
+::-webkit-scrollbar {
+    width: 2px; /* Lebar scrollbar */
+    background-color: #7752FE;
+    border-radius: 10px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #f7f7f7; /* Warna thumb (badan scrollbar) */
+    border-radius: 10px; /* Bentuk thumb */
+    height: 5px;
+}
+
+.player{
+    width: 10rem;
+    height: 1.5rem;
+    background: #7752FE;
+    position: absolute;
+    bottom: -0.75rem;
+    right: 5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 2px solid rgba(255, 238, 217, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    overflow: hidden;
+    
+}
+
+.player p{
+    font-size: 0.7em;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+    background-color: #7752FE;
+    border-radius: 10px;
+    padding: 2px 5px;
+}
+
+@keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+
+audio{
+    display: none;
+}
+
+.card button{
+    position: absolute;
+    bottom: -2.2rem;
+    left: 7.5rem;
+    width: 5rem;
+    height: 1.5rem;
+    font-size: 0.7em;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 238, 217, 1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    background: #7752FE;
+    color: #ffffff;
+}
